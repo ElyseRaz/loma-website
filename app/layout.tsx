@@ -102,8 +102,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
+        {/* Only the FILL axis varies across the site (icons ↔ filled star
+            rating); pinning opsz/wght/GRAD to the defaults we actually use
+            keeps the font a fraction of the full variable-axis size. */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap"
           rel="stylesheet"
         />
         <Script id="theme-init" strategy="beforeInteractive">
